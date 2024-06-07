@@ -106373,7 +106373,7 @@ $1(a){var s,r,q=null
 A.dF("check message data "+A.nS(a).j(0))
 this.a.pw(a)
 s=t.MZ
-r=A.b([A.b([new A.eR("Open Menu",q,q,new A.XE("https://monybronx.github.io/testing_host_site/#/shop"),q,q,q,q,q,q),new A.eR("Venue Detail",q,"location",q,q,q,q,q,q,q)],s),A.b([new A.eR("Open Location","https://maps.app.goo.gl/wWd97ystwKg14nbb7",q,q,q,q,q,q,q,q),new A.eR("Get Contact",q,"contact",q,q,q,q,q,q,q)],s)],t.bC)
+r=A.b([A.b([new A.eR("Open Menu",q,q,new A.XE("https://monybronx.github.io/testing_host_site/#"),q,q,q,q,q,q),new A.eR("Venue Detail",q,"location",q,q,q,q,q,q,q)],s),A.b([new A.eR("Open Location","https://maps.app.goo.gl/wWd97ystwKg14nbb7",q,q,q,q,q,q,q,q),new A.eR("Get Contact",q,"contact",q,q,q,q,q,q,q)],s)],t.bC)
 a.el.a3p(a.f.a,"Hello There",!1,q,!1,q,a.b,q,new A.Sa(r),q)},
 $S:58}
 A.aEp.prototype={
