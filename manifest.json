@@ -1,6 +1,6 @@
 {
-    "name": "pizzamenu",
-    "short_name": "pizzamenu",
+    "name": "admin_flutter",
+    "short_name": "admin_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
