@@ -7,26 +7,39 @@
 </head>
 
 <body>
-  <a-scene>
-    <!-- <a-assets>
+  <a-scene xr-mode-ui="enabled: false">
+    <a-assets>
+      <img id="localTexture" src="img.jpg">
       <img id="boxTexture"
         src="https://images.pexels.com/photos/6157052/pexels-photo-6157052.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
       <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
       <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-    </a-assets> -->
-
-    <a-box color="blue" position="-2 2 -5" rotation="25 45 45" scale="2 2 2"
+      <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+      <a-asset-item id="car" src="scene.gltf"></a-asset-item>
+    </a-assets>
+    
+    
+    <a-box color="red" position="-2 2 -5" rotation="25 45 45" scale="2 2 2"
       animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
       animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
       animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"></a-box>
-    <a-sphere src="#boxTexture" position="1 4 -6"
-      animation="property: object3D.position.x; to: 5.5; dir: alternate; dur: 2000; loop: true"></a-sphere>
+    <!-- <a-sphere src="#boxTexture" position="1 4 -6"
+      animation="property: object3D.position.x; to: 5.5; dir: alternate; dur: 2000; loop: true"></a-sphere> -->
 
-    <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
 
+    <a-entity text="value: Hello, A-Frame!; color: #FFF"
+    position="-2 4 -5"
+    scale="4 4 4" animation__position="property: object3D.position.y; to: 4.4; dir: alternate; dur: 2000; loop: true"></a-entity>
+
+    <a-gltf-model src="#car"></a-gltf-model>
+
+    <!-- <a-entity gltf-model="#cityModel"></a-entity> -->
+
+    
+    <!-- <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane> -->
 
     <!-- <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
-    <a-sky src="#FFF"></a-sky>
+    <!-- <a-sky src="#FFF"></a-sky> -->
 
     <a-light type="ambient" color="#445451"></a-light>
     <a-light type="point" intensity="2" position="2 4 4"></a-light>
