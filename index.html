@@ -1,21 +1,41 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <!-- <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script> -->
-  </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <img id="boxTexture" src="https://images.pexels.com/photos/6157052/pexels-photo-6157052.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-        <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-      </a-assets>
 
-      <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-      </a-box>
-      <a-sphere src="#boxTexture" position="1 0 2"></a-sphere>
+<head>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script type="text/javascript" src="box.js"></script>
+</head>
 
-      <!-- <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
-       <a-sky src="#skyTexture"></a-sky>
-    </a-scene>
-  </body>
+<body>
+  <a-scene>
+    <!-- <a-assets>
+      <img id="boxTexture"
+        src="https://images.pexels.com/photos/6157052/pexels-photo-6157052.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+    </a-assets> -->
+
+    <a-box color="blue" position="-2 2 -5" rotation="25 45 45" scale="2 2 2"
+      animation__position="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"
+      animation__mouseenter="property: scale; to: 2.3 2.3 2.3; dur: 300; startEvents: mouseenter"
+      animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"></a-box>
+    <a-sphere src="#boxTexture" position="1 4 -6"
+      animation="property: object3D.position.x; to: 5.5; dir: alternate; dur: 2000; loop: true"></a-sphere>
+
+    <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+
+
+    <!-- <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
+    <a-sky src="#FFF"></a-sky>
+
+    <a-light type="ambient" color="#445451"></a-light>
+    <a-light type="point" intensity="2" position="2 4 4"></a-light>
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
+<script>
+</script>
+
 </html>
